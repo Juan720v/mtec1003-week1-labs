@@ -15,6 +15,39 @@ $ ls<ENTER>
 
 Copy and paste the output of ls below.
 ----------
+'3D Objects'/
+ AppData/
+'Application Data'@
+ BullseyeCoverageError.txt
+ Contacts/
+ Cookies@
+'Creative Cloud Files'/
+ Documents/
+ Downloads/
+ Favorites/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{886f2d32-7053-11ec-ab22-91144121f83e}.TM.blf
+ NTUSER.DAT{886f2d32-7053-11ec-ab22-91144121f83e}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{886f2d32-7053-11ec-ab22-91144121f83e}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ source/
 
 
 
@@ -28,10 +61,10 @@ $ ls -l Documents<ENTER>
 
 Copy and paste the first *two lines* of output below.
 ----------
-
-
-
-
+total 0
+lrwxrwxrwx 1 juan7 197609 20 Sep 25  2020 'My Music' -> /c/Users/juan7/Music/
+lrwxrwxrwx 1 juan7 197609 23 Sep 25  2020 'My Pictures' -> /c/Users/juan7/Pictures
+lrwxrwxrwx 1 juan7 197609 21 Sep 25  2020 'My Videos' -> /c/Users/juan7/Videos/
 
 
 ==========
@@ -42,7 +75,8 @@ $ ls -a Documents
 Copy and paste the first *two lines* of output below.
 ----------
 
-
+./  
+../ 
 
 
 
@@ -55,7 +89,7 @@ $ ls doesnotexist
 Copy and paste the output below.
 ----------
 
-
+ls: cannot access 'doesnotexist': No such file or directory
 
 
 
@@ -64,7 +98,7 @@ Copy and paste the output below.
 5.  What key do I press to go to the previous command?
 ----------
 
-
+up arrow
 
 
 
@@ -73,14 +107,15 @@ Copy and paste the output below.
 6.  Name two flags/options that we used in this exercise.
 ----------
 
-
+-l
+-a
 
 
 ==========
 7.  What was the main command that we used throughout this exercise?
 ----------
 
-
+ls
 
 
 
@@ -89,7 +124,7 @@ Copy and paste the output below.
 8.  What's one an argument that we've so far passed to a command?
 ----------
 
-
+Documents
 
 
 
@@ -102,6 +137,7 @@ $ foo<ENTER>
 Copy and paste the output below.
 ----------
 
+bash: foo: command not found
 
 
 
@@ -116,6 +152,7 @@ Copy and paste the output below.
 ----------
 
 
+bash: foo: command not found
 
 
 
@@ -127,7 +164,10 @@ $ ls -a Desktop
 
 Identify the command, flag, argument, and prompt:
 ----------
-
+Command: ls
+flag/option: -a
+argument: Desktop
+prompt: $
 
 
 
@@ -144,7 +184,7 @@ Follow the instructions line-by-line.
 12. Open a new terminal window. Create a directory called mtec1003. What command did you use?
 ----------
 
-
+mkdir
 
 
 
@@ -152,7 +192,7 @@ Follow the instructions line-by-line.
 13. Change your directory so that you're in mtec1003. What command did you use?
 ----------
 
-
+cd mtec1003
 
 
 
@@ -170,6 +210,7 @@ Copy and paste the output of pwd below.
 ----------
 
 
+/c/Users/juan7/mtec1003
 
 
 
@@ -184,7 +225,7 @@ Copy and paste the output below.
 ----------
 
 
-
+animals/
 
 
 
@@ -198,7 +239,7 @@ Copy and paste the output below.
 ----------
 
 
-
+animals/   food/
 
 
 
@@ -211,7 +252,7 @@ $ ls
 Copy and paste the output below.
 ----------
 
-
+animals/  foo/  food/
 
 
 
@@ -226,6 +267,7 @@ Copy and paste the output below.
 ----------
 
 
+/c/Users/juan7/mtec1003/foo/bar/baz/qux
 
 
 
@@ -240,6 +282,8 @@ Copy and paste the output below.
 ----------
 
 
+/c/Users/juan7/mtec1003/foo/bar
+
 
 
 
@@ -253,8 +297,7 @@ $ pwd
 Copy and paste the output below.
 ----------
 
-
-
+/c/Users/juan7/mtec1003/foo/bar/baz/qux
 
 
 
@@ -268,6 +311,7 @@ Copy and paste the output below.
 ----------
 
 
+/c/Users/juan7/mtec1003
 
 
 
@@ -282,7 +326,9 @@ $ ls -l
 Copy and paste the first 3 lines from the output into the space below.
 ----------
 
-
+total 0
+drwxr-xr-x 1 juan7 197609 0 Jan 31 16:26 foo/
+drwxr-xr-x 1 juan7 197609 0 Jan 31 16:24 food/
 
 
 
@@ -296,7 +342,7 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 
-
+/c/Users/juan7
 
 
 
@@ -315,6 +361,7 @@ Copy and paste the output into the space below.
 
 
 
+
 ==========
 25. Type:
 
@@ -324,7 +371,7 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 
-
+bash: cd: /Volumes: No such file or directory
 
 
 
@@ -340,6 +387,7 @@ Copy and paste the output into the space below.
 
 
 
+/c/Users/juan7/mtec1003
 
 
 
@@ -352,7 +400,7 @@ Copy and paste the output into the space below.
 ----------
 
 
-
+LAPTOP-IHQ5LG21
 
 
 
@@ -360,7 +408,8 @@ Copy and paste the output into the space below.
 28. Make sure you're back in your mtec1002, which should be in your home folder.  What command would you use to find out if you're in the right folder?  Write the command below, then run it.
 ----------
 
-
+pwd
+/c/Users/juan7/mtec1003
 
 
 
@@ -374,7 +423,7 @@ Otherwise skip this question/step!
 ----------
 
 
-
+SKIP;
 
 
 
@@ -391,7 +440,7 @@ lemon
 Write the one command you used below:
 ----------
 
-
+mkdir -p pineapple/orange/strawberry/lemon
 
 
 
@@ -403,7 +452,7 @@ Write the command you used to create the directory below:
 ----------
 
 
-
+mkdir aardvark
 
 
 
@@ -414,7 +463,7 @@ What is the modified date of the aardvark directory?
 ----------
 
 
-
+Jan 31 16:48
 
 
 
@@ -430,6 +479,7 @@ What command did you use?
 
 
 
+mkdir -p foo/bar/baz
 
 
 
@@ -440,7 +490,7 @@ What command did you use?
 ----------
 
 
-
+cd foo/bar/baz
 
 
 
@@ -451,6 +501,7 @@ What command did you use?
 ----------
 
 
+cd ../..
 
 
 
@@ -459,7 +510,7 @@ What command did you use?
 36. What command is used to delete empty directories?
 ----------
 
-
+rmdir
 
 
 
@@ -469,7 +520,7 @@ What command did you use?
 ----------
 
 
-
+pwd
 
 
 
@@ -478,7 +529,7 @@ What command did you use?
 ----------
 
 
-
+-a
 
 
 
@@ -487,7 +538,7 @@ What command did you use?
 ----------
 
 
-
+cd ~ 
 
 
 
@@ -496,7 +547,7 @@ What command did you use?
 ----------
 
 
-
+A pathname is the general form of the name of a file or directory; it specifies a unique location in a file system
 
 
 
@@ -505,10 +556,12 @@ What command did you use?
 ----------
 
 
-
+a directory is a catalog structure on a file system that references other files (and potentially other directories we can think of is as. thing that contains files (it's a little more complex that that...) they're usually used to organize files  
 
 
 
 ==========
 42. What's the *absolute* path (full path, starting at root) to your user's Downloads directory?
 ----------
+
+/c/Users/juan7/Downloads
